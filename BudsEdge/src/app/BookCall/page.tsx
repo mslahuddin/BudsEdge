@@ -18,7 +18,7 @@ export default function BookCall() {
 
   const timezones = Intl.supportedValuesOf("timeZone");
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!date || !time || !timezone) {
