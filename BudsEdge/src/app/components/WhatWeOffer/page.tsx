@@ -70,7 +70,8 @@ export default function WhatWeOffer() {
             return (
               <div
                 key={index}
-                  style={{ ["--delay" as any]: `${i * 0.15}s` } as React.CSSProperties}
+                 style={{ ["--delay" as any]: `${index * 0.15}s` } as React.CSSProperties}
+
                 className={`
                   relative p-8 rounded-xl
                   bg-[#0a1829e8] backdrop-blur-xl
