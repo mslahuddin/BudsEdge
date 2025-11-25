@@ -35,7 +35,7 @@ export default function Contact() {
             e.preventDefault();
             setLoading(true);
 
-            const form = new FormData(e.target);
+            const form = new FormData(e.currentTarget);
 
             const res = await fetch("/api/contact", {
               method: "POST",
