@@ -61,7 +61,7 @@ export default function Services() {
             return (
               <div
                 key={i}
-                style={{ "--delay": `${i * 0.15}s` }}
+                 style={{ ["--delay" as any]: `${i * 0.15}s` } as React.CSSProperties}
                 className={`
                   group p-8 rounded-2xl
                   bg-[#0a1628c6] backdrop-blur-xl
