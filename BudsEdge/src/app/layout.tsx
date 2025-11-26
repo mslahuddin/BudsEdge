@@ -57,12 +57,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${exo2.variable} ${poppins.variable} ${inter.variable} ${outfit.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "BudsEdge",
+              "url": "https://budsedge.com",
+              "logo": "https://budsedge.com/BudsEdgeLogo.png",
+              "sameAs": []
+            }
+            `,
+          }}
+        />
+      </head>
+
       <body className="bg-[var(--bg-dark)] text-[var(--text-light)]">
         <Header />
         {children}
-
         <Toaster position="top-center" />
-
         <Footer />
       </body>
     </html>
