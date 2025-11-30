@@ -1,5 +1,6 @@
-'use client';
+"use client";
 import { Linkedin, Github, Twitter } from "lucide-react";
+import Compliance from "../Compliance/page"
 
 export default function Footer() {
   return (
@@ -7,12 +8,12 @@ export default function Footer() {
       className={`
         relative
         bg-gradient-to-r from-[#030A17] via-[#0a1a33] to-[#051225]
-        text-gray-300 border-t border-[#1f3b57]
-        shadow-[0_-2px_20px_rgba(0,224,255,0.15)]
-        text-center overflow-hidden
+        text-gray-300
+        border-t border-[#1f3b57]
+        overflow-hidden
       `}
     >
-      {/* TOP LINE GLOW */}
+      {/* Glow Line */}
       <div
         className={`
           absolute top-0 left-0 w-full h-[2px]
@@ -20,59 +21,68 @@ export default function Footer() {
           animate-glowLine
         `}
       />
+      
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-10 space-y-4">
-        {/* BRAND / YEAR */}
-        <p className="text-sm sm:text-base font-medium text-white">
-          © {new Date().getFullYear()} BudsEdge™ — BudsEdge is a trading name of SOURCESTREAM COMMERCE LTD.
-        </p>
+      <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* LEGAL DISCLOSURE */}
-        <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-          SOURCESTREAM COMMERCE LTD is a company registered in England and Wales.
-          Company Number: <span className="font-medium">16597800</span>.
-          Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, UNITED KINGDOM.
-        </p>
+        {/* GRID */}
+        <div className=" grid gap-8 md:grid-cols-3 ">
+          {/* LOGO / COMPANY */}
+          <div>
+            <p className="text-white font-semibold text-lg">BudsEdge™</p>
+            <p className="text-xs mt-2 text-gray-400">
+              © {new Date().getFullYear()} BudsEdge — trading name of SOURCESTREAM COMMERCE LTD.
+            </p>
+            <p className="text-xs mt-1 text-gray-500">
+              BudsEdge™ is a trademark asserted by SOURCESTREAM COMMERCE LTD.
+            </p>
+          </div>
 
-        {/* TM LINE */}
-        <p className="text-xs text-gray-500">
-          BudsEdge™ is a trade mark asserted by SOURCESTREAM COMMERCE LTD.
-        </p>
+          {/* ADDRESS */}
+          <div>
+            <h4 className="font-semibold text-white mb-2">Address</h4>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              71-75 Shelton Street,<br />
+              Covent Garden, London, WC2H 9JQ,<br />
+              United Kingdom.
+            </p>
+          </div>
 
-        {/* SOCIAL ICONS */}
-        <div className="flex justify-center gap-6 mt-6">
-          {[Linkedin, Github, Twitter].map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className={`
-                p-2 rounded-full bg-[#0f1e33]
-                border border-[#1f3b57]
-                hover:border-[#00e0ff] hover:text-[#00e0ff]
-                transition-all duration-300 ease-out
-                hover:scale-110
-              `}
-            >
-              <Icon className="w-5 h-5" />
-            </a>
-          ))}
+          {/* SOCIALS */}
+          <div>
+            <h4 className="font-semibold text-white mb-3">Follow Us</h4>
+            <div className="flex gap-4">
+              {[Linkedin, Github, Twitter].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className={`
+                    h-10 w-10
+                    flex items-center justify-center
+                    rounded-full
+                    bg-[#0f1e33]
+                    border border-[#1f3b57]
+                    hover:border-[#00e0ff] hover:text-[#00e0ff]
+                    hover:scale-110 shadow-lg
+                    transition-all duration-300
+                  `}
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
+
       </div>
 
       {/* STYLES */}
       <style jsx>{`
         @keyframes glowLine {
-          0% {
-            opacity: 0.5;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0.5;
-          }
+          0% { opacity: 0.4; }
+          50% { opacity: 1; }
+          100% { opacity: 0.4; }
         }
-
         .animate-glowLine {
           animation: glowLine 3s ease-in-out infinite;
         }
