@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://budsedge.com
+
+# Sitemaps
+Sitemap: https://budsedge.com/sitemap.xml
