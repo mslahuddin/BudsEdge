@@ -38,15 +38,13 @@ const inter = Inter({
 /* ===========================
    SITE METADATA
 =========================== */
-export const metadata: Metadata = {
-  title: "BudsEdge™ | IT Solutions Company",
-  description: "Empowering businesses with smart and scalable IT solutions.",
- icons: {
-  apple: "/apple-touch-icon.png",
-},
-manifest: "/site.webmanifest",
-
+export const metadata = {
+  icons: {
+    icon: "/icon.png?v=2",
+    apple: "/apple-touch-icon.png?v=2",
+  },
 };
+
 
 /* ===========================
    ROOT LAYOUT

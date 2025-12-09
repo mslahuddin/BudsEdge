@@ -1,9 +1,5 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://budsedge.com
-
-# Sitemaps
-Sitemap: https://budsedge.com/sitemap.xml
+# Force Google to fetch favicon
+Icon: /icon.png
